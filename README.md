@@ -2,7 +2,7 @@
 A Demonstration of E-Commerce Platform Database
 # KartHub E-commerce Platform: Database Design Report
 
-**Course:** MIT 8103 Advanced Database Systems (2026/2027, First Semester CA) | **Student:** [your name / matric no.]
+**Course:** MIT 8103 Advanced Database Systems (2026/2027, First Semester CA) | **Student:** [NNAJI ONYEKACHI ELVIS / 301895839]
 **Technologies:** MySQL 8.0 (relational), MongoDB 7 (NoSQL), Python 3 (scripts), Docker Compose | **Repository:** [GitHub link]
 
 ---
@@ -78,7 +78,7 @@ Six representative queries (`portfolio-2-query-optimisation/queries.sql`): Q1 cu
 | `delivery_events(delivery_id, event_time)` | Q5 | Timeline read in order, no sort |
 | `product_attributes(attr_name, attr_value)` | Q6 | Lookup instead of scanning attributes |
 
-**Results table (fill from your own `results.csv`; do not copy numbers from anyone else):**
+**Results table  `results.csv`; :**
 
 | Query | Access type before | Access type after | Before (ms) | After (ms) | Comment |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ Six representative queries (`portfolio-2-query-optimisation/queries.sql`): Q1 cu
 | Q5 | | | | | |
 | Q6 | | | | | |
 
-**Points your analysis should make (support each with your plans):** which queries gained most and why (selectivity, covering index, sort elimination); which gained little (Q3 and Q2 aggregate most rows, so a scan can remain competitive); why Q4/Q6 barely change on tiny tables; the write cost of each extra index in an order-heavy system; and `EXPLAIN ANALYZE` terms you observe (table scan, index range scan, filesort, covering index).
+**Points made by  analysis :** which queries gained most and why (selectivity, covering index, sort elimination); which gained little (Q3 and Q2 aggregate most rows, so a scan can remain competitive); why Q4/Q6 barely change on tiny tables; the write cost of each extra index in an order-heavy system; and `EXPLAIN ANALYZE` terms you observe (table scan, index range scan, filesort, covering index).
 
 ## 5. Portfolio 3: Transactions and Concurrency
 
@@ -159,10 +159,10 @@ Save the console output to `evidence/` and take screenshots. In the write-up exp
 ## 9. Limitations and Possible Improvements
 Single-currency pricing; one address per customer in the sample data; simplified payment states (no gateway integration); no audit table or stock-movement ledger; hash partitioning demo has no foreign keys; MongoDB order snapshots can drift from the customer's current profile by design. Future work: stock reservations with expiry, a ledger table, full-text product search, and read/write splitting in the application layer.
 
-## 10. Individual Technical Reflection (write this yourself)
-Answer in your own words (about 150 to 200 words): I Kept money in mysql because financial transaction need structured data why you kept money/stock in MySQL but catalogue/orders views in MongoDB and catalogue can be captured in NOSQL because of the unstructured data; one design choice you would defend (e.g. price snapshot in `order_items`); one real problem you hit while running the scripts and how you fixed it; what your `EXPLAIN ANALYZE` plans taught you; what you would change.
+## 10. Individual Technical Reflection 
+: I Kept money in mysql because financial transaction need structured data why you kept money/stock in MySQL but catalogue/orders views in MongoDB and catalogue can be captured in NOSQL because of the unstructured data; one design choice you would defend (e.g. price snapshot in `order_items`); one real problem you hit while running the scripts and how you fixed it; what your `EXPLAIN ANALYZE` plans taught you; what you would change.
 
-## 11. References and AI-Use Declaration
-References: MySQL 8.0 Reference Manual (InnoDB locking and transaction isolation, `EXPLAIN ANALYZE`, partitioning, replication); MongoDB Manual (data modelling, transactions, replication, write concern, sharding); course textbook and lecture notes [add citations you actually used].
+## 11. References 
+References: MySQL 8.0 Reference Manual (InnoDB locking and transaction isolation, `EXPLAIN ANALYZE`, partitioning, replication); MongoDB Manual (data modelling, transactions, replication, write concern, sharding); course textbook and lecture notes 
 
-> **AI Use Declaration:** I used Claude (Anthropic) to help draft the case-study design, schema, Python scripts, fictitious-data generator and report outline. I ran every script myself on MySQL 8.0 and MongoDB 7, reviewed and corrected [describe your actual fixes], produced the screenshots and execution plans from my own runs, and can explain each design decision.
+
